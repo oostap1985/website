@@ -11,7 +11,9 @@ const css = {
   bracelet: "W50p H8p Ps-a T100p L25p Bgc-$robotHareGrayC",
   sleeve: "W48p H26p Ps-a R-48p T6p -Gdl100d,$robotHareGrayA;86p,tp;86p",
   secondSleeve: "W40p H32p Ps-a R-40p T5p Bdl1;s;$robotHareBlackA -Gdl100d,$robotHareGreenA;86p,tp;86p",
-  hand: "W35p H15p Ps-a R-75p T82p Bgc-$robotHareGrayA Ct_af,b D_af,b W15p_af,b H30p_af,b Ps-a_af,b Bgc-$robotHareGrayC_af,b T70p_af,b L20p_af R20p_b",
+  hand: "W35p H15p Ps-a R-75p T82p -Gdl180d,$robotHareGrayA;70%,tp;70% D-f Jc-c Ai-fs",
+  finger: "W26p H115p Bgc-$robotHareGrayA Bdblr5u Bdbrr5u",
+  fingerInterval: "W11p H70p Bgc-$robotHareGrayA",
   leg: "W35p Apcr1 Bgc-$robotHareGrayA Ps-a T100p Bd1;s;$robotHareBlackA"
 }
 %>
@@ -67,6 +69,11 @@ const css = {
           <div class="<%= css.sleeve %>"></div>
           <div class="<%= css.secondSleeve %>"></div>
           <div class="<%= css.hand %>">
+            <div class="<%= css.finger %>"></div>
+            <div class="<%= css.fingerInterval %>"></div>
+            <div class="<%= css.finger %>"></div>
+            <div class="<%= css.fingerInterval %>"></div>
+            <div class="<%= css.finger %>"></div>
           </div>
         </div>
         <!-- Right arm-->
@@ -77,7 +84,13 @@ const css = {
           </div>
           <div class="<%= css.sleeve %>"></div>
           <div class="<%= css.secondSleeve %>"></div>
-          <div class="<%= css.hand %>"></div>
+          <div class="<%= css.hand %>">
+            <div class="<%= css.finger %>"></div>
+            <div class="<%= css.fingerInterval %>"></div>
+            <div class="<%= css.finger %>"></div>
+            <div class="<%= css.fingerInterval %>"></div>
+            <div class="<%= css.finger %>"></div>
+          </div>
         </div>
       </div>
       <!-- Legs -->
