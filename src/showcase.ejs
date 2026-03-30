@@ -1,0 +1,29 @@
+---
+title: Showcase
+layout: base.ejs
+---
+
+<div class="P-$headerH;100px;0 D-f C-$accent900 @:w<769px_P60px;5px;0">
+  <div class="D-f W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 @:w<769px_D-n"></div>
+      <div class="Pb40px W100p">
+        <div class="M40px;-140px;80px P0;160px W-$castomWidth Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_M40px;0;80px @:w<769px_P0;20px">
+          <h1><span class="C-$brand">Mlut</span> is more than just CSS</h1>
+        </div>
+        <div class="H40px W-$castomWidth Ml-140px Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_Ml0"></div>
+          <ul class="Lss-n P0 M40px;20px D-g Gtc-t4 Gap40px @:w<1441px_Gtc-t3  @:w<1025px_Gtc-t2 @:w<425px_Gtc-t1">
+            <% for (let user of it.users) { %>
+              <%- include('_includes/components/show-card.ejs', {
+                optTag: 'li',
+                avatar: user.avatar,
+                name: user.name,
+                quote: user.quote,
+                id: user.id
+              }) %>
+            <% } %>
+          </ul>
+        <div class="H40px W-$castomWidth Ml-140px Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_Ml0"></div>
+      </div>
+  <div class="D-f W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 @:w<769px_D-n"></div>
+</div>
+
+ <!-- Bgi-$imageGradient -->

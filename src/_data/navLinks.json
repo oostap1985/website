@@ -14,5 +14,9 @@
 	{
 		"link":"https://play.mlut.style/",
 		"text":"Sandbox"
+	},
+	{
+		"link":"/showcase",
+		"text":"Showcase"
 	}
 ]
