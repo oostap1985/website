@@ -1,43 +1,28 @@
 <%
   const tag = it.optTag ?? 'li';
-  const avatars = it.avatar && Array.isArray(it.avatar) ? it.avatar : [];
-  const defaultAvatar = avatars[0] || '';
+  const item = it.item; // переименовали case в item
+  const images = item.images && Array.isArray(item.images) ? item.images : [];
+  const defaultImage = images[0] || '';
+  const othersImages = images.filter(image => image !== defaultImage);
 %>
 
-<<%= tag %> class="">
-  <a class="Txd-n C-ih W100p H100p D-f Fld-c Bdt1;s;$accent750 Bdb1;s;$accent750 Bdt1;s;$brand_h Bdb1;s;$brand_h Ts-Bd;0.3s;ease Cs" id="<%= it.id %>" href="#0">
-    <div class="W100p H263px P10px Ps container">
-      <% if (defaultAvatar) { %>
+<<%= tag %>>
+  <a class="Txd-n C-ih W100p H100p D-f Fld-c Bdt1;s;$accent750 Bdb1;s;$accent750 Bdt1;s;$brand_h Bdb1;s;$brand_h Ts-bd,0.3s,e Cs" id="<%= item.id %>" href="#0">
+    <div class="W100p H263px P10px Ps">
+      <% if (defaultImage && othersImages.length) { %>
         <img 
-          src="<%= defaultAvatar %>"
-          alt="<%= it.name %>"
+          src="<%= defaultImage %>"
+          alt="<%= item.title %>"
           class="W100p H100p Ojf-cv Ojp-c Bdrd8px hover-switch-image"
-          data-images='<%= JSON.stringify(avatars) %>'
+          data-hover-slides="<%= othersImages %>"
+          data-options='{"touch": "end", "infinite": false, "preventScroll": true}'
         />
       <% } %>
-      <!-- Контейнер для индикатора -->
-      <div class="image-indicator D-n Ps-a B14px L0 R0 D-f Jc-c Gap8px Z1">
-        <% for (let i = 0; i < avatars.length; i++) { %>
-          <span class="indicator-dot W24px H2px Bg#fff O0.5 Ts-all;0.3s;ease" data-index="<%= i %>"></span>
-        <% } %>
-      </div>
-      <button class="back D-n W40px H40px Bdrd8px Bd-n Ps-a T110px L20px Bgc#fff O0.5 O0.3_a" type="button">
-        <img src="../../assets/img/arrow.svg" alt="arrow back" class="Tf -Rt180deg"/>
-      </button>
-      <button class="next D-n W40px H40px Bdrd8px Bd-n Ps-a T110px R20px Bgc#fff O0.5 O0.3_a" type="button">
-        <img src="../../assets/img/arrow.svg" alt="arrow next"/>
-      </button>
     </div>
     <div class="D-f Fld-c P10px Bdt1;s;$accent750">
-      <span class="Txwm-n Ov-h Txo-e Mb12px"><%= it.name ?? '' %></span>
-      <span class="Whs-pw Ov-h webkit Fns16px C-$gray350"><%= it.quote ?? '' %></span>
+      <span class="Txwm-n Ov-h Txo-e Mb12px"><%= item.title ?? '' %></span>
+      <span class="Whs-pw Ov-h webkit Fns16px C-$gray350"><%= item.description ?? '' %></span>
     </div>
   </a>
 </<%= tag %>>
 
-<!--
-  text-wrap: nowrap;         Txwm-n
-  overflow: hidden;          Ov-h
-  text-overflow: ellipsis;   Txo-e
-  white-space: wrap;         Whs-pw
--->

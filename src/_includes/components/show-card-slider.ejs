@@ -1,0 +1,34 @@
+<%
+  const tag = it.optTag ?? 'li';
+  const item = it.item;
+  const images = item.images && Array.isArray(item.images) ? item.images : [];
+  const defaultImage = images[0] || '';
+  const othersImages = images.filter(image => image !== defaultImage);
+%>
+
+<<%= tag %>>
+    <a class="Txd-n C-ih W100p H100p D-f Fld-c Bdt1;s;$accent750 Bdb1;s;$accent750 Bdt1;s;$brand_h Bdb1;s;$brand_h Ts-bd,0.3s,e Cs" id="<%= item.id %>" href="#0">
+        <slider-element
+            src="<%= defaultImage %>"
+            alt="<%= item.title %>"
+            data-hover-slides="<%= othersImages %>"
+            data-options='{"touch": "end", "infinite": false, "preventScroll": true}'
+        >
+            <div class="W100p H263px P10px Ps">
+              <% if (defaultImage && othersImages.length) { %>
+                <img 
+                  src=""
+                  alt=""
+                  class="W100p H100p Ojf-cv Ojp-c Bdrd8px hover-switch-image"
+                />
+              <% } %>
+            </div>
+        </slider-element>
+        <div class="D-f Fld-c P10px Bdt1;s;$accent750">
+          <span class="Txwm-n Ov-h Txo-e Mb12px"><%= item.title ?? '' %></span>
+          <span class="Whs-pw Ov-h webkit Fns16px C-$gray350"><%= item.description ?? '' %></span>
+        </div>
+    </a>
+</<%= tag %>>
+
+<script src="../../assets/script/slider.js" type="module"></script>

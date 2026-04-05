@@ -3,27 +3,22 @@ title: Showcase
 layout: base.ejs
 ---
 
-<div class="P-$headerH;100px;0 D-f C-$accent900 @:w<769px_P60px;5px;0">
-  <div class="D-f W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 @:w<769px_D-n"></div>
+<div class="P-$headerH;5px;0 D-f C-$accent900 md_P-$headerH;100px;0">
+  <div class="D-n W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 md_D-f"></div>
       <div class="Pb40px W100p">
-        <div class="M40px;-140px;80px P0;160px W-$castomWidth Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_M40px;0;80px @:w<769px_P0;20px">
+        <div class="M40px;0;80px P0;20px W100p Bdt1px;s;$accent750 Bdb1px;s;$accent750 md_W-$castomWidth md_M40px;-140px;80px md_P0;160px">
           <h1><span class="C-$brand">Mlut</span> is more than just CSS</h1>
         </div>
-        <div class="H40px W-$castomWidth Ml-140px Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_Ml0"></div>
-          <ul class="Lss-n P0 M40px;20px D-g Gtc-t4 Gap40px @:w<1441px_Gtc-t3  @:w<1025px_Gtc-t2 @:w<425px_Gtc-t1">
-            <% for (let user of it.users) { %>
-              <%- include('_includes/components/show-card.ejs', {
-                optTag: 'li',
-                avatar: user.avatar,
-                name: user.name,
-                quote: user.quote,
-                id: user.id
-              }) %>
+        <div class="H40px W100p Ml0 Bdt1px;s;$accent750 Bdb1px;s;$accent750 md_W-$castomWidth md_Ml-140px"></div>
+          <ul class="Lss-n P0 M40px;20px D-g Gtc-t1 Gap40px sm_Gtc-t2 xl_Gtc-t3 xxl_Gtc-t4">
+            <% for (let elem of it.cases) { %>
+              <%- include('_includes/components/show-card-slider.ejs', { optTag: 'li', item: elem }) %>
             <% } %>
           </ul>
-        <div class="H40px W-$castomWidth Ml-140px Bdt1px;s;$accent750 Bdb1px;s;$accent750 @:w<769px_W100p @:w<769px_Ml0"></div>
+        <div class="H40px W100p Ml0 Bdt1px;s;$accent750 Bdb1px;s;$accent750 md_W-$castomWidth md_Ml-140px"></div>
       </div>
-  <div class="D-f W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 @:w<769px_D-n"></div>
+  <div class="D-n W40px Bdl1px;s;$accent750 Bdr1px;s;$accent750 md_D-f"></div>
 </div>
 
- <!-- Bgi-$imageGradient -->
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/web-projects-lab/hover-slider@1.0.3/hover-slider.min.js"></script> -->
