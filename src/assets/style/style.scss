@@ -41,10 +41,8 @@ html{
 	--ml-blueGray:rgb(236, 240, 246,0.5);
 	--ml-gray200:#d1d5db;
 	--ml-gray350:#cacacaa0;
-	//
-	--ml-castomWidth: calc(100% + 280px);
-	--ml-imageGradient:
-        repeating-linear-gradient(315deg, var(--ml-accent750) 0 1px, transparent 1px 6px );
+	// showcase
+	--ml-bleedWidth: calc(100% + 280px);
 }
 
 
@@ -161,11 +159,4 @@ html{
 
 	}
 
-}
-
-.webkit {
-	display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
 }
