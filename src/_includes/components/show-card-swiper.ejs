@@ -1,0 +1,14 @@
+<%
+  const item = it.item;
+  const images = item.images && Array.isArray(item.images) ? item.images : [];
+%>
+
+<li>
+    <a class="Txd-n C-ih W100p H100p D-f Fld-c -Bdy -Bdyc-$accent750 -Bdyc-$brand_h Ts-bd,0.3s,e Cs" href="<%= item.link %>">
+        <slider-component images='<%= JSON.stringify(images) %>' title="<%= item.title %>"></slider-component>
+        <div class="D-f Fld-c P2.5u Bdt1;s;$accent750">
+          <span class="Mb3u Fns4u"><%= item.title ?? '' %></span>
+          <span class="Fns3u C-$gray350"><%= item.description ?? '' %></span>
+        </div>
+    </a>
+</li>

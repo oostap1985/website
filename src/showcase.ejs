@@ -3,21 +3,26 @@ title: Showcase
 layout: base.ejs
 ---
 
+<%
+  const bdX = "-Bdx -Bdxc-$accent750";
+  const bdY = "-Bdy -Bdyc-$accent750";
+%>
+
 <div class="P-$headerH;5;0 D-f C-$accent900 md_P-$headerH;100;0">
-  <div class="D-n W8u Bdl1;s;$accent750 Bdr1;s;$accent750 md_D-f"></div>
+  <div class="D-n W8u <%= bdX %> md_D-f"></div>
       <div class="Pb40 W100p">
-        <div class="M40;0;60 P0;20 W100p Bdt1;s;$accent750 Bdb1;s;$accent750 md_W-$bleedWidth md_M40;-140;80 md_P0;160">
+        <div class="M40;0;60 P0;20 W100p <%= bdY %> md_W-$bleedWidth md_M40;-140;80 md_P0;160">
           <h1 class="Txa-c M10;0">Showcase</h1>
         </div>
-        <div class="D-n H8u W-$bleedWidth Ml-140 Bdt1;s;$accent750 Bdb1;s;$accent750 md_D-f"></div>
+        <div class="D-n H8u W-$bleedWidth Ml-140 <%= bdY %> md_D-f"></div>
           <ul class="Lss-n P0 M8u;5u D-g Gtc-t1 Gap8u sm_Gtc-t2 xl_Gtc-t3 xxl_Gtc-t4">
             <% for (let elem of it.cases) { %>
-              <%- include('_includes/components/show-card-slider.ejs', { optTag: 'li', item: elem }) %>
+              <%- include('_includes/components/show-card-swiper.ejs', { item: elem }) %>
             <% } %>
           </ul>
-        <div class="D-n H8u W-$bleedWidth Ml-140 Bdt1;s;$accent750 Bdb1;s;$accent750 md_D-f"></div>
+        <div class="D-n H8u W-$bleedWidth Ml-140 <%= bdY %> md_D-f"></div>
       </div>
-  <div class="D-n W8u Bdl1;s;$accent750 Bdr1;s;$accent750 md_D-f"></div>
+  <div class="D-n W8u <%= bdX %> md_D-f"></div>
 </div>
 
-<script src="/assets/script/slider.js" type="module"></script>
+<script src="/assets/script/swiper.js" type="module"></script>
