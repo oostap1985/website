@@ -4,11 +4,40 @@
 %>
 
 <li>
-    <a class="Txd-n C-ih W100p H100p D-f Fld-c -Bdy -Bdyc-$accent750 -Bdyc-$brand_h Ts-bd,0.3s,e Cs" href="<%= item.link %>">
-        <slider-component images='<%= JSON.stringify(images) %>' title="<%= item.title %>"></slider-component>
-        <div class="D-f Fld-c P2.5u Bdt1;s;$accent750">
-          <span class="Mb3u Fns4u"><%= item.title ?? '' %></span>
-          <span class="Fns3u C-$gray350"><%= item.description ?? '' %></span>
+  <a class="Txd-n C-ih -Sz100p D-f Fld-c -Bdy -Bdyc-$accent750 -Bdyc-$brand_h Ts-bd,0.3s,e Cs" href="<%= item.link %>">
+    <slider-component>
+      <div class="P2.5u">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <% if (images.length) { %>
+              <% images.forEach(img => { %>
+                <div class="swiper-slide">
+                  <div class="W100p H244">
+                    <img src="<%= img %>" alt="<%= item.title %>" class="-Sz100p Ojf-cv Ojp-c Bdrd8">
+                  </div>
+                </div>
+              <% }); %>
+            <% } else { %>
+              <div class="swiper-slide">Нет изображений</div>
+            <% } %>
+          </div>
+          <div class="swiper-pagination"></div>
+          <button class="prev D-f P1u Bg-n Bd-n Bdrd8 Ps-a T109 L0 Zi1 md_D-n">
+            <svg class="Fi-$gray200 Fi-$brand_a Ts-shortTs Tf -Rt180d Cs" width="26px" height="26px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150.46 478 129.86 456.5 339.11 256 129.86 55.49 150.46 34 382.14 256 150.46 478"/>
+            </svg>
+          </button>
+          <button class="next D-f P1u Bg-n Bd-n Bdrd8 Ps-a T109 R0 Zi1 md_D-n">
+            <svg class="Fi-$gray200 Fi-$brand_a Ts-$shortTs Cs" width="26px" height="26px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150.46 478 129.86 456.5 339.11 256 129.86 55.49 150.46 34 382.14 256 150.46 478"/>
+            </svg>
+          </button>
         </div>
-    </a>
+      </div>
+    </slider-component>
+    <div class="D-f Fld-c P2.5u Bdt1;s;$accent750">
+      <span class="Mb3u Fns4u"><%= item.title ?? '' %></span>
+      <span class="Fns3u C-$gray350"><%= item.description ?? '' %></span>
+    </div>
+  </a>
 </li>

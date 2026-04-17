@@ -1,49 +1,49 @@
 [
     {
       "title": "John Smith",
-      "images": ["/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/сases/Koshak_Koteevich.jpg"],
       "description": "Все, что человеческий разум способен понять и во что он способен поверить, достижимо.",
       "link": "/"
     },
     {
       "title": "Emily Blunt",
-      "images": ["/assets/img/imagesCases/John_Smith-new.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/John_Smith-new.jpg", "/assets/img/сases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
       "description": "Сложнее всего начать действовать, все остальное зависит только от упорства.",
       "link": "/"
     },
     {
       "title": "Koshak Koteevich",
-      "images": ["/assets/img/imagesCases/Tigra_Leopardovich.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/Tigra_Leopardovich.jpg", "/assets/img/сases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
       "description": "Неудача — это возможность начать заново, но уже более мудро.",
       "link": "/"
     },
     {
       "title": "Luna Lovegood",
-      "images": ["/assets/img/imagesCases/orange-wood-table.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/orange-wood-table.jpg", "/assets/img/сases/Koshak_Koteevich.jpg"],
       "description": "Если проблему можно решить, не стоит о ней беспокоиться.",
       "link": "/"
     },
     {
       "title": "Milana Clark",
-      "images": ["/assets/img/imagesCases/Panda_Padlovna.jpg", "/assets/img/imagesCases/orange-wood-table.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/Panda_Padlovna.jpg", "/assets/img/сases/orange-wood-table.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
       "description": "Обстоятельства часто можно изменить, изменив свое отношение к ним.",
       "link": "/"
     },
     {
       "title": "Leopardovskiy Orange Apelsinovich",
-      "images": ["/assets/img/imagesCases/Koshak_Koteevich.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg"],
+      "images": ["/assets/img/imagesCases/Koshak_Koteevich.jpg", "/assets/img/сases/Emily_Blunt-new.jpg"],
       "description": "Обстоятельства часто можно изменить, изменив свое отношение к ним.",
       "link": "/"
     },
     {
       "title": "Panda Padlovna",
-      "images": ["/assets/img/imagesCases/Milana_Clark-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg"],
+      "images": ["/assets/img/imagesCases/Milana_Clark-new.jpg", "/assets/img/сases/Koshak_Koteevich.jpg"],
       "description": "Вдохновение приходит только во время работы. Обстоятельства часто можно изменить, изменив свое отношение к ним.",
       "link": "/"
     },
     {
       "title": "Tigra Leopardovich",
-      "images": ["/assets/img/imagesCases/Luna_Lovegood-new.jpg", "/assets/img/imagesCases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg", "/assets/img/imagesCases/Panda_Padlovna.jpg"],
+      "images": ["/assets/img/imagesCases/Luna_Lovegood-new.jpg", "/assets/img/сases/Emily_Blunt-new.jpg", "/assets/img/imagesCases/Koshak_Koteevich.jpg", "/assets/img/imagesCases/Panda_Padlovna.jpg"],
       "description": "Если проблему можно решить, не стоит о ней беспокоиться.",
       "link": "/"
     }
