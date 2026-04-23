@@ -1,6 +1,5 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs';
 
-
 const swiperCss = "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css";
 if (!document.querySelector(`link[href*="swiper-bundle.min.css"]`)) {
   const link = document.createElement('link');
@@ -15,11 +14,6 @@ class SliderComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    this.initSwiper();
-  }
-
-  initSwiper() {
-    if (!this.isConnected) return;
     const swiperContainer = this.querySelector('.swiper');
     if (!swiperContainer) return;
 
