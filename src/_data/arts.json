@@ -18,5 +18,9 @@
 	{
 		"artId":"clown-emoji",
 		"bgColor":"Bgc-$artClownEmoji"
+	},
+	{
+		"artId":"mushroom",
+		"bgColor":"Bgc-$artMushroom"
 	}
 ]
